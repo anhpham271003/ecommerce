@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Mozilla+Headline:wght@200..700&family=Nata+Sans:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #ff5252;
+  --color-midnight: #121063;
+  --color-tahiti: #3ab7bf;
+  --color-bermuda: #78dcca;
+  --font-monoton: "Monoton", sans-serif;
+  --font-mozilla: "Mozilla Headline", sans-serif;
+  --font-nata: "Nata Sans", sans-serif;
+}
+
+*{
+  margin: 0px; 
+  adding: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.container{
+  width: 90%;
+  margin: auto;
+}
+
+.top-strip {
+  border-top: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.link:hover{
+  color: var(--color-primary);
+}
