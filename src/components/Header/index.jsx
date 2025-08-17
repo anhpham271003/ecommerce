@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Search from '../Search';
+import Navigation from './Navigation';
 //cartshop
 import Badge from '@mui/material/Badge';
 import { styled } from '@mui/material/styles';
@@ -21,7 +22,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 const Header = () => {
   return (
-    <header>
+    <header className = "!bg-white">
         {/* top header */}
         <div className="top-strip py-2">
             <div className="container">
@@ -47,7 +48,7 @@ const Header = () => {
             </div>
         </div>
         {/* main header */}
-        <div className="header py-3">
+        <div className="header py-3 border-b-[1px] border-gray-300">
             <div className="container flex items-center justify-between">
                 <div className="col-1 w-[25%]">
                     <Link to="/"> <img src="/logo2.png"  className="h-auto rounded-lg" alt="Logo" /> </Link>
@@ -94,8 +95,8 @@ const Header = () => {
                 </div>
             </div>
         </div>
-
-
+        {/* navigation */}
+        <Navigation/>
     </header>
   );
 };

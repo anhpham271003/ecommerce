@@ -21,6 +21,7 @@
 body{
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
+  background-color: #f8f9fa;
 }
 
 .container{
@@ -32,11 +33,14 @@ body{
   border-top: 1px solid rgba(0,0,0,0.1);
   border-bottom: 1px solid rgba(0,0,0,0.1);
 }
-
+//Link
 .link:hover{
   color: var(--color-primary);
 }
-
+//ICON CART
 .MuiBadge-badge{
   background-color: var(--color-primary) !important;
 }
+
+
+
