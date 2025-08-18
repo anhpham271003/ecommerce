@@ -20,8 +20,8 @@ const Navigation = () =>{
             <nav className = "py-2">
                 {/* navigation left */}
                 <div className="container flex items-center justify-end ">
-                    <div className="col-1 w-[20%] ">
-                        <Button className = "!text-black gap-2 w-full" onClick ={openDrawerCategoryHandler}>
+                    <div className="col-1 w-[20%]">
+                        <Button className = "!text-black gap-2 w-full flex !justify-start" onClick ={openDrawerCategoryHandler}>
                             <HiOutlineMenuAlt2 className ="text-[18px]"/> SHOP BY CATEGORIES
                         <FaCaretDown className = "text-[18px]"/>
                         </Button>

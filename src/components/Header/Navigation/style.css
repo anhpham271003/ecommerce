@@ -5,6 +5,7 @@
 .nav li:hover .submenu{
     opacity: 1 !important;
     visibility: inherit;
+    z-index: 100;
 }
 
 .nav li .submenu li .submenu{
