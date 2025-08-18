@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Mozilla+Headline:wght@200..700&family=Nata+Sans:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -10,6 +11,8 @@
   --font-monoton: "Monoton", sans-serif;
   --font-mozilla: "Mozilla Headline", sans-serif;
   --font-nata: "Nata Sans", sans-serif;
+  --font-liber: "Libertinus Sans", sans-serif;
+  --font-liber-500: 500;
 }
 
 *{
@@ -37,10 +40,5 @@ body{
 .link:hover{
   color: var(--color-primary);
 }
-//ICON CART
-.MuiBadge-badge{
-  background-color: var(--color-primary) !important;
-}
-
 
 

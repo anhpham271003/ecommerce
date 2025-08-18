@@ -66,8 +66,13 @@ const Header = () => {
                         <li className="list-none">
                             <Tooltip title="Compare" arrow placement = "bottom">
                                 <IconButton aria-label="compare">
-                                    <StyledBadge badgeContent={4} color="secondary">
-                                        <IoGitCompareOutline />
+                                     <StyledBadge badgeContent={4} sx={{
+                                        '& .MuiBadge-badge': {
+                                        backgroundColor: '#ff5252',
+                                        color: '#fff'
+                                        }
+                                    }}>
+                                      <IoGitCompareOutline />
                                     </StyledBadge>
                                 </IconButton>
                             </Tooltip>
@@ -75,8 +80,13 @@ const Header = () => {
                         <li className="list-none">
                             <Tooltip title="WishList" arrow placement = "bottom">
                                 <IconButton aria-label="heart">
-                                    <StyledBadge badgeContent={4} color="secondary">
-                                        <FaRegHeart />
+                                    <StyledBadge badgeContent={4} sx={{
+                                        '& .MuiBadge-badge': {
+                                        backgroundColor: '#ff5252',
+                                        color: '    #fff'
+                                        }
+                                    }}>
+                                      <FaRegHeart />
                                     </StyledBadge>
                                 </IconButton>
                             </Tooltip>
@@ -84,7 +94,12 @@ const Header = () => {
                         <li className="list-none">
                              <Tooltip title="Cart" arrow placement = "bottom">
                                 <IconButton aria-label="cart">
-                                    <StyledBadge badgeContent={4} color="secondary">
+                                     <StyledBadge badgeContent={4} sx={{
+                                        '& .MuiBadge-badge': {
+                                        backgroundColor: '#ff5252',
+                                        color: '#fff'
+                                        }
+                                    }}>
                                         <MdOutlineShoppingCart />
                                     </StyledBadge>
                                 </IconButton>
