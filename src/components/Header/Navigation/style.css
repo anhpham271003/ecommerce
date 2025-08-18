@@ -1,0 +1,21 @@
+.nav li .submenu{
+    visibility: hidden;
+    opacity: 0;
+}
+.nav li:hover .submenu{
+    opacity: 1 !important;
+    visibility: inherit;
+}
+
+.nav li .submenu li .submenu{
+    top: 0px !important;
+    left:100% !important;
+    opacity: 0 !important;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+.nav li .submenu li:hover .submenu{
+    left:100% !important;
+    visibility: visible;
+    opacity: 1 !important;
+}

@@ -5,6 +5,7 @@ import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import { FaCaretDown } from "react-icons/fa6";
 import { MdOutlineRocketLaunch } from "react-icons/md";
 import CategoryPanel from './CategoryPanel.jsx';
+import './style.css';
 
 const Navigation = () =>{
     //useState open drawer
@@ -27,19 +28,83 @@ const Navigation = () =>{
                     </div>
                     {/* navigation center */}
                     <div className="col-2 w-[60%] flex justify-center">
-                        <ul className="flex items-center !ml-[20px] gap-4">
+                        <ul className="flex items-center !ml-[20px] gap-4 nav">
                             <li className="list-none">
                                 <Link to= "/" className = "link transition text-[15px] font-bold">
                                     <Button className = "!text-black !font-bold hover:!text-[red]">HOME</Button>
                                 </Link>
                             </li>
-                            <li className="list-none">
+                            <li className="list-none relative">
                                 <Link to= "/" className = "link transition text-[15px] font-[500]">
                                     <Button className = "!text-black !font-[500] hover:!text-[red] ">PHONE</Button>
                                 </Link>
 
+                                <div className ="submenu absolute top-[100%] left-[0%] min-w-[150px] bg-white shadow-lg opacity-0 transition">
+                                    <ul className = "flex flex-col p-2">
+                                        <li className="list-none w-full relative">
+                                            <Link to ="/" className ="">
+                                                <Button className ="!text-black hover:!text-[#ff5252] !font-[400] w-full !justify-start">SAMSUNG</Button>
+                                            </Link>
+                                             {/* // submenu for phone category */}
+                                             <div className ="submenu absolute min-w-[150px] top-[0%] left-[120%] bg-white shadow-lg opacity-0 transition">
+                                                <ul className = "flex flex-col p-2">
+                                                    <li className="list-none w-full">
+                                                        <Link to ="/" className ="">
+                                                            <Button className ="!text-black  hover:!text-[#ff5252] !font-[400] w-full !justify-start">Galaxy Ultra</Button>
+                                                        </Link>
+                                                    </li>
+                                                    <li className="list-none">
+                                                        <Link to ="/" className ="">
+                                                            <Button className ="!text-black hover:!text-[#ff5252] !font-[400] w-full !justify-start">Galaxy S</Button>
+                                                        </Link>
+                                                    </li>
+                                                    <li className="list-none">
+                                                        <Link to ="/" className ="">
+                                                            <Button className ="!text-black hover:!text-[#ff5252] !font-[400] w-full !justify-start">Galaxy Note</Button>
+                                                        </Link>
+                                                    </li>
+                                                    <li className="list-none">
+                                                        <Link to ="/" className ="">
+                                                            <Button className ="!text-black hover:!text-[#ff5252] !font-[400] w-full !justify-start">Galaxy Z</Button>
+                                                        </Link>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li className="list-none w-full relative">
+                                            <Link to ="/" className ="">
+                                                <Button className ="!text-black  hover:!text-[#ff5252] !font-[400] w-full !justify-start">IPHONE</Button>
+                                            </Link>
+                                            {/* // submenu for iphone category */}
+                                             <div className ="submenu absolute min-w-[175px] top-[0%] left-[120%] bg-white shadow-lg opacity-0 transition">
+                                                <ul className = "flex flex-col p-2">
+                                                    <li className="list-none w-full relative">
+                                                        <Link to ="/" className ="">
+                                                            <Button className ="!text-black text-[18px] hover:!text-[#ff5252] !font-[400] w-full !justify-start">iPhone 15 series</Button>
+                                                        </Link>
+                                                    </li>
+                                                    <li className="list-none">
+                                                        <Link to ="/" className ="">
+                                                            <Button className ="!text-black hover:!text-[#ff5252] !font-[400] w-full !justify-start">iPhone 14 series</Button>
+                                                        </Link>
+                                                    </li>
+                                                    <li className="list-none">
+                                                        <Link to ="/" className ="">
+                                                            <Button className ="!text-black hover:!text-[#ff5252] !font-[400] w-full !justify-start">iPhone 13 series</Button>
+                                                        </Link>
+                                                    </li>
+                                                    <li className="list-none">
+                                                        <Link to ="/" className ="">
+                                                            <Button className ="!text-black hover:!text-[#ff5252] !font-[400] w-full !justify-start">iPhone 12 series</Button>
+                                                        </Link>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
 
-                                
+
                             </li>
                             <li className="list-none">
                                 <Link to= "/" className = "link transition text-[15px] font-[500]">

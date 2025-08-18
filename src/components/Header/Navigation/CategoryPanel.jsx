@@ -60,7 +60,7 @@ const CategoryPanel = (props) => {
                         {
                             openSubmenu === 0  &&(
                                 //  {/* ul lever 2 */}
-                                <ul className = "submenu pl-8 w-full">
+                                <ul className = " pl-8 w-full">
                                     {/* samsung */}
                                     <li className="list-none flex relative flex-col">
                                         <Link to="/" className = "w-full">
@@ -75,7 +75,7 @@ const CategoryPanel = (props) => {
 
                                         { openBottomSubmenu === 0 && (
                                             // {/* ul lever 3 */}
-                                            <ul className = "bottom_submenu a pl-7 w-full">
+                                            <ul className = " a pl-7 w-full">
                                                 <li className="list-none flex relative">
                                                     <Link to="/category/samsung" className= "hover:text-[#ff5252] transition w-full !justify-start !text-[16px] font-liber  !mb-1">Galaxy Ultra</Link>
                                                 </li>
@@ -105,7 +105,7 @@ const CategoryPanel = (props) => {
 
                                         { openBottomSubmenu === 1 && (
                                             // {/* ul lever 3 */}
-                                            <ul className = "bottom_submenu a pl-7 w-full">
+                                            <ul className = " a pl-7 w-full">
                                                 <li className="list-none flex relative">
                                                     <Link to="/category/samsung" className= "hover:text-[#ff5252] transition w-full !justify-start !text-[16px] font-liber  !mb-1">iPhone 15 series</Link>
                                                 </li>
@@ -142,7 +142,7 @@ const CategoryPanel = (props) => {
                         {
                             openSubmenu === 2  &&(
                                 //  {/* ul lever 2 */}
-                                <ul className = "submenu pl-8 w-full">
+                                <ul className = " pl-8 w-full">
                                     {/* //LAPTOP GAMING */}
                                     <li className="list-none flex relative flex-col">
                                         <Link to="/" className = "w-full">
@@ -157,7 +157,7 @@ const CategoryPanel = (props) => {
 
                                         { openBottomSubmenu === 2 && (
                                             // {/* ul lever 3 */}
-                                            <ul className = "bottom_submenu a pl-7 w-full">
+                                            <ul className = " a pl-7 w-full">
                                                 <li className="list-none flex relative">
                                                     <Link to="/category/samsung" className= "hover:text-[#ff5252] transition w-full !justify-start !text-[16px] font-liber  !mb-1">Asus Gaming</Link>
                                                 </li>
@@ -194,7 +194,7 @@ const CategoryPanel = (props) => {
 
                                         { openBottomSubmenu === 3 && (
                                             // {/* ul lever 3 */}
-                                            <ul className = "bottom_submenu a pl-7 w-full">
+                                            <ul className = " a pl-7 w-full">
                                                 <li className="list-none flex relative">
                                                     <Link to="/category/samsung" className= "hover:text-[#ff5252] transition w-full !justify-start !text-[16px] font-liber  !mb-1">Dell</Link>
                                                 </li>
