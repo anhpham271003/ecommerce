@@ -1,8 +1,15 @@
 import React from 'react'
+import Slider from '../../components/Slider';
+import CategorySlider from '../../components/CategorySlider';
 
 const Home  = () => {
     return (
-        <div> Home</div>
+        <>
+        <div className ="w-full">  
+            <Slider/>
+            <CategorySlider/>
+        Home</div>
+        </>
     )
 }
 
