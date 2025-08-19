@@ -1,0 +1,20 @@
+
+.categorySlider .swiper-button-next,
+.categorySlider .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+}
+
+.categorySlider .swiper-button-next::after,
+.categorySlider .swiper-button-prev::after {
+    font-size: 18px !important;
+}
+
+.categorySlider .item{
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.categorySlider .item:hover img {
+    transform: scale(1.1);
+}
