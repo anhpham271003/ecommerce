@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 import './CategorySlider.css';
 
 // import required modules
-import { Navigation } from 'swiper/modules';
+import { Autoplay , Navigation } from 'swiper/modules';
 import { Link } from 'react-router-dom';
 
 const  CategorySlider = () => {
@@ -22,8 +22,12 @@ const  CategorySlider = () => {
                 pagination={{
                 clickable: true,
                 }}
+                 autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+                }}
                 navigation={true}
-                modules={[Navigation]}
+                modules={[Autoplay, Navigation]}
                 slidesOffsetBefore={0}
                 className="mySwiper !py-0 !mt-10px !h-[150px]"
             >
