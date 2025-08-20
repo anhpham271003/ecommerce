@@ -1,6 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Rating from "@mui/material/Rating";
+import Button from "@mui/material/Button";
+import { FaRegHeart } from "react-icons/fa";
+import { GoGitCompare } from "react-icons/go";
+import { MdOutlineZoomOutMap } from "react-icons/md";
 
 const ProductItem = () => {
   return (
@@ -14,7 +18,19 @@ const ProductItem = () => {
         <span className="flex items-center absolute z-50 top-[10px] left-[10px] text-white bg-primary rounded-lg p-1 text-[12px] font-[500]">
           -10%
         </span>
+        <div className="actions absolute top-[10px] right-[3px] z-50 flex items-center gap-1 flex-col w-[50px] ">
+          <Button className="!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-white  hover:text-white hover:!bg-primary group ">
+            <FaRegHeart className="text-[18px] text-black group-hover:text-white"/>
+          </Button>
+          <Button className="!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-white  hover:text-white hover:!bg-primary group ">
+            <GoGitCompare className="text-[18px] text-black group-hover:text-white"/>
+          </Button>
+          <Button className="!w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-white  hover:text-white hover:!bg-primary group ">
+            <MdOutlineZoomOutMap className="text-[18px] text-black group-hover:text-white"/>
+          </Button>
+        </div>
       </div>
+
       <div className="info p-3 text-left bg-[#f1f1f1]">
         <h5 className="text-[17px] font-liber tracking-widest">
           <Link to="/" className="transition-all hover:text-[#ff5252]">
