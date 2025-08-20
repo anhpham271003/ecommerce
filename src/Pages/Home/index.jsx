@@ -7,6 +7,7 @@ import { FaShippingFast } from "react-icons/fa";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from '@mui/material/Box';
+import ProductSlider from "../../components/ProductSlider";
 
 const Home = () => {
   //state for tabs
@@ -19,8 +20,13 @@ const Home = () => {
     <>
       <Slider />
       <CategorySlider />
+	    {/* //products popular */}
       <section className="bg-white py-5">
+
+		{/* //title and tabs for products popular */}
         <div className="container w-full">
+
+		  {/* //title and tabs */}
           <div className="flex justify-between items-center">
             {/* //title popular productts */}
             <div className="leftSection">
@@ -30,7 +36,7 @@ const Home = () => {
               </p>
             </div>
             {/* //tabs for products */}
-            <div className="rightSection w-[60%]">
+            <div className="rightSection w-[60%] flex justify-end">
               <Tabs
                 value={value}
                 onChange={handleChange}
@@ -102,13 +108,18 @@ const Home = () => {
               </Tabs>
             </div>
           </div>
+
+		  {/* //products popular */}	
+		  <ProductSlider itemsProduct ={6}/>
+
         </div>
       </section>
-	
-      <section className=" py-15 bg-white">
+
+
+      <section className=" py-10 bg-white">
         <div className="container">
           {/* Free Shipping Banner */}
-          <div className="freeShipping !w-[90%] !m-auto p-4  border-4 border-amber-500 rounded-md flex items-center justify-between">
+          <div className="freeShipping  !m-auto p-4  border-4 border-amber-500 rounded-md flex items-center justify-between">
             <div className="col-1 flex items-center gap-4">
               <FaShippingFast className="text-[50px]"></FaShippingFast>
               <span className="text-[20px] font-bold">FREE SHIPPING</span>
