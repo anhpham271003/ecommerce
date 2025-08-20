@@ -3,17 +3,111 @@ import Slider from "../../components/Slider";
 import CategorySlider from "../../components/CategorySlider";
 import BannerSlider from "../../components/BannerSlider";
 import { FaShippingFast } from "react-icons/fa";
+//tab for products Popular
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Box from '@mui/material/Box';
 
 const Home = () => {
+  //state for tabs
+  const [value, setValue] = React.useState(0);
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
   return (
     <>
       <Slider />
       <CategorySlider />
-
+      <section className="bg-white py-5">
+        <div className="container w-full">
+          <div className="flex justify-between items-center">
+            {/* //title popular productts */}
+            <div className="leftSection">
+              <h2 className="text-[25px] font-bold">Popular Products</h2>
+              <p className="font-nata">
+                Don't miss out on the products on sale!
+              </p>
+            </div>
+            {/* //tabs for products */}
+            <div className="rightSection w-[60%]">
+              <Tabs
+                value={value}
+                onChange={handleChange}
+                sx={{
+                  "& .MuiTabs-indicator": {
+                    backgroundColor: "var(--color-primary)",
+                  },
+                }}
+                variant="scrollable"
+                scrollButtons="auto"
+                aria-label="scrollable auto tabs example"
+              >
+                <Tab
+                  label="Phone"
+                  sx={{
+                    "&.Mui-selected": {
+                      color: "var(--color-primary)",
+                    },
+                  }}
+                />
+                <Tab
+                  label="Laptop"
+                  sx={{
+                    "&.Mui-selected": {
+                      color: "var(--color-primary)",
+                    },
+                  }}
+                />
+                <Tab
+                  label="Desktop"
+                  sx={{
+                    "&.Mui-selected": {
+                      color: "var(--color-primary)",
+                    },
+                  }}
+                />
+                <Tab
+                  label="Earphone"
+                  sx={{
+                    "&.Mui-selected": {
+                      color: "var(--color-primary)",
+                    },
+                  }}
+                />
+                <Tab
+                  label="Keyboard"
+                  sx={{
+                    "&.Mui-selected": {
+                      color: "var(--color-primary)",
+                    },
+                  }}
+                />
+                <Tab
+                  label="Mouse"
+                  sx={{
+                    "&.Mui-selected": {
+                      color: "var(--color-primary)",
+                    },
+                  }}
+                />
+                <Tab
+                  label="Screen"
+                  sx={{
+                    "&.Mui-selected": {
+                      color: "var(--color-primary)",
+                    },
+                  }}
+                />
+              </Tabs>
+            </div>
+          </div>
+        </div>
+      </section>
+	
       <section className=" py-15 bg-white">
         <div className="container">
-
-            {/* Free Shipping Banner */}    
+          {/* Free Shipping Banner */}
           <div className="freeShipping !w-[90%] !m-auto p-4  border-4 border-amber-500 rounded-md flex items-center justify-between">
             <div className="col-1 flex items-center gap-4">
               <FaShippingFast className="text-[50px]"></FaShippingFast>
@@ -32,10 +126,11 @@ const Home = () => {
             </div>
           </div>
 
-            {/* //adsBanner */}
+          {/* //adsBanner */}
           <BannerSlider items={3} />
         </div>
       </section>
+
       <br /> <br /> <br /> <br /> <br /> <br />
     </>
   );
