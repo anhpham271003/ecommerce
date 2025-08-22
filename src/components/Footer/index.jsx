@@ -1,9 +1,92 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
+import { IoChatbubblesOutline } from "react-icons/io5";
 
-const Footer = () =>{
-    return(
-        <div></div>
-    )
-}
+const Footer = () => {
+  return (
+    <div className="bg-white flex py-10">
+
+        {/* footerLeft */}
+      <div className="leftPart w-[25%] border-r-2 pl-8 border-[rgba(0,0,0,0.2)]">
+        <h2 className="text-[20px] font-[600] !mb-6">Contact Me</h2>
+        <p className="text-[14px] font-[500] pb-3 font-liber">
+          MegaShop - Address:
+          <br />
+          Hoàng Mai - Đồng Thái - An Hải - Hai Phòng
+        </p>
+        <Link className="hover:text-primary font-liber" to="mailto:anhp39911@gmail.com">
+          anhp39911@gmail.com
+        </Link>
+
+        <span className="text-[16px] font-[500] block w-full !mt-5 font-liber">
+          Phone Number:
+        </span>
+        <span className="text-[20px] font-[600] block w-full  text-primary">
+          (+84) 362025195
+        </span>
+        <div className="flex items-center gap-2 !mt-5">
+          <IoChatbubblesOutline className="text-[40px] !m-0 text-primary"/>
+          <span className="text-[20px] font-[600] !m-0">
+            Online Chat
+            <br /> Get Expert Help
+          </span>
+        </div>
+      </div>
+        {/* FooterCenter */}
+      <div className="centerPart w-[50%] pl-8 flex">
+        <div className="centerCol1 w-[50%] !my-0">
+            <h2 className="text-[20px] font-[600] !mb-6">Category Products</h2>
+            <ul className="list">
+                <li className="list-none text-[14px] w-full !mb-2">
+                    <Link to="/" className="hover:text-primary font-nata font-[600]">Phone</Link>
+                </li>
+                <li className="list-none text-[14px] w-full !mb-2">
+                    <Link to="/" className="hover:text-primary font-nata font-[600]">Laptop</Link>
+                </li>
+                <li className="list-none text-[14px] w-full !mb-2">
+                    <Link to="/" className="hover:text-primary font-nata font-[600]">Desktop</Link>
+                </li>
+                <li className="list-none text-[14px] w-full !mb-2">
+                    <Link to="/" className="hover:text-primary font-nata font-[600]">Earphone</Link>
+                </li>
+                <li className="list-none text-[14px] w-full !mb-2">
+                    <Link to="/" className="hover:text-primary font-nata font-[600]">Keyboard</Link>
+                </li>
+                <li className="list-none text-[14px] w-full !mb-2">
+                    <Link to="/" className="hover:text-primary font-nata font-[600]">Mouse</Link>
+                </li>
+                <li className="list-none text-[14px] w-full !mb-2">
+                    <Link to="/" className="hover:text-primary font-nata font-[600]">Screen</Link>
+                </li>
+            </ul>
+        </div>
+        <div className="centerCol2 w-[50%] !my-0">
+            <h2 className="text-[20px] font-[600] !mb-6">My Company</h2>
+            <ul className="list">
+                <li className="list-none text-[14px] w-full !mb-2">
+                    <Link to="/" className="hover:text-primary font-nata font-[600]">Stores</Link>
+                </li>
+                <li className="list-none text-[14px] w-full !mb-2">
+                    <Link to="/" className="hover:text-primary font-nata font-[600]">Contact Me</Link>
+                </li>
+                <li className="list-none text-[14px] w-full !mb-2">
+                    <Link to="/" className="hover:text-primary font-nata font-[600]">Terms and Conditions Of Use</Link>
+                </li>
+                <li className="list-none text-[14px] w-full !mb-2">
+                    <Link to="/" className="hover:text-primary font-nata font-[600]">Secure Payment</Link>
+                </li>
+                <li className="list-none text-[14px] w-full !mb-2">
+                    <Link to="/" className="hover:text-primary font-nata font-[600]">Login</Link>
+                </li>
+            </ul>
+        </div>
+      </div>
+      {/* FooterRight */}
+      <div className="rightPart w-[25%] !my-0">
+         <h2 className="text-[20px] font-[600] !mb-6 ">Site Map</h2>
+      </div>
+    </div>
+  );
+};
 
 export default Footer;

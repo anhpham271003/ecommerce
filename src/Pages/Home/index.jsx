@@ -27,6 +27,7 @@ import { TbTruckReturn } from "react-icons/tb";
 import { IoGiftOutline, IoWalletOutline  } from "react-icons/io5";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { RiExchangeLine } from "react-icons/ri";
+import Footer from "../../components/Footer";
 
 const Home = () => {
   //state for tabs
@@ -241,7 +242,8 @@ const Home = () => {
         </div>
       </section>
 
-      <br /> <br /> <br /> <br /> <br /> <br />
+      {/* footer */}
+      <Footer/>
     </>
   );
 };
