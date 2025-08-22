@@ -12,11 +12,10 @@
   --font-mozilla: "Mozilla Headline", sans-serif;
   --font-nata: "Nata Sans", sans-serif;
   --font-liber: "Libertinus Sans", sans-serif;
-  --font-liber-500: 500;
 }
 
 *{
-  margin: 0px; 
+  margin: auto; 
   adding: 0px;
   box-sizing: border-box;
 }
@@ -26,7 +25,7 @@ body{
   font-optical-sizing: auto;
   background-color: #f8f9fa;
 }
-
+//Scrollbar
 ::webkit-scrollbar{
   width: 8px !important;
   height: 8px !important;
@@ -38,6 +37,7 @@ body{
 ::webkit-scrollbar-track{
   background-color: #fff;
 }
+//Scrollbar/
 
 .container{
   width: 90%;
@@ -52,5 +52,4 @@ body{
 .link:hover{
   color: var(--color-primary);
 }
-
 

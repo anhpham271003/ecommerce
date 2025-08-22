@@ -80,7 +80,7 @@ const Navigation = () =>{
                                                 <ul className = "flex flex-col p-2">
                                                     <li className="list-none w-full relative">
                                                         <Link to ="/" className ="">
-                                                            <Button className ="!text-black text-[18px] hover:!text-[#ff5252] !font-[400] w-full !justify-start">iPhone 15 series</Button>
+                                                            <Button className ="!text-black hover:!text-[#ff5252] !font-[400] w-full !justify-start">iPhone 15 series</Button>
                                                         </Link>
                                                     </li>
                                                     <li className="list-none">
