@@ -1,0 +1,23 @@
+.slider2 .swiper-button-prev,
+.slider2 .swiper-button-next {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+}
+.slider2 .swiper-button-prev {
+  left: -40px;
+}
+.slider2 .swiper-button-next {
+  right: -40px;
+}
+
+.slider2:hover .swiper-button-prev {
+  opacity: 1;
+  visibility: visible;
+  left: 10px;
+}
+.slider2:hover .swiper-button-next {
+  opacity: 1;
+  visibility: visible;
+  right: 10px;
+}
