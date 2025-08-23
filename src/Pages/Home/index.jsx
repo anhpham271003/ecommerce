@@ -27,6 +27,7 @@ import { TbTruckReturn } from "react-icons/tb";
 import { IoGiftOutline, IoWalletOutline  } from "react-icons/io5";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { RiExchangeLine } from "react-icons/ri";
+import Slider2 from "../../components/Slider2";
 import Footer from "../../components/Footer";
 
 const Home = () => {
@@ -39,6 +40,8 @@ const Home = () => {
   return (
     <>
       <Slider />
+      <Slider2 />
+
       <CategorySlider />
       {/* //products popular */}
       <section className="bg-white py-5">
@@ -155,7 +158,7 @@ const Home = () => {
           </div>
 
           {/* //adsBanner */}
-          <BannerSlider items={3} />
+          <BannerSlider items={3} heightItem ={220}/>
         </div>
       </section>
 
@@ -166,7 +169,7 @@ const Home = () => {
             Featured Products
           </h2>
           <ProductSlider itemsProduct={6} />
-          <BannerSlider items={2} />
+          <BannerSlider items={2} heightItem = {330}/>
         </div>
       </section>
 
