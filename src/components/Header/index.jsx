@@ -62,7 +62,6 @@ const Header = () => {
         <div className="container flex items-center justify-between">
           <div className="col-1 w-[25%]">
             <Link to="/">
-              {" "}
               <img
                 src="/logo2.png"
                 className="h-auto rounded-lg"
@@ -78,7 +77,7 @@ const Header = () => {
               <li className="list-none">
                 <Link to="/login" className="link transition font-[500]">
                   Login
-                </Link>{" "}
+                </Link>
                 |&nbsp;
                 <Link to="/register" className="link transition font-[500]">
                   Register

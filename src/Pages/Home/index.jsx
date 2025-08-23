@@ -28,6 +28,7 @@ import { IoGiftOutline, IoWalletOutline  } from "react-icons/io5";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { RiExchangeLine } from "react-icons/ri";
 import Slider2 from "../../components/Slider2";
+import Footer from "../../components/Footer";
 
 const Home = () => {
   //state for tabs
@@ -244,7 +245,8 @@ const Home = () => {
         </div>
       </section>
 
-      
+      {/* footer */}
+      <Footer/>
     </>
   );
 };
