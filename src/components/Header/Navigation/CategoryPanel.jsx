@@ -40,15 +40,15 @@ const CategoryPanel = (props) => {
 
     //prepare drawer list
     const DrawerList = (
-        <Box sx={{ width: 250 }} role="presentation">
-            <div className="scroll">
+        <Box sx={{ width: 250, height: '100%' }} role="presentation" >
+            <div className="scroll flex flex-col justify-start items-start h-fit overflow-y-auto">
                 {/* ul lever 1 */}
                 <ul className = "w-full">
                     {/* //phone */}
                     <li className="list-none flex relative items-center categoryPanel flex-col">
                         <Link to="/" className = "w-full">
                             <Button className= " w-full !justify-start !text-[rgba(0,0,0,0.7)] gap-[2px]">
-                                <MdOutlinePhoneAndroid className="!text-[18px]"/>
+                                <MdOutlinePhoneAndroid className="!text-[18px] !m-0"/>
                             Phone</Button>
                         </Link>
                         {openSubmenu === 0 ? (
@@ -130,7 +130,7 @@ const CategoryPanel = (props) => {
                     <li className="list-none flex relative items-center categoryPanel flex-col">
                         <Link to="/" className = "w-full">
                             <Button className= " w-full !justify-start !text-[rgba(0,0,0,0.7)] gap-[2px]">
-                                <FaLaptop className="!text-[18px]"/>
+                                <FaLaptop className="!text-[18px] !m-0"/>
                             Laptop</Button>
                         </Link>
                         {openSubmenu === 2 ? (
@@ -231,9 +231,9 @@ const CategoryPanel = (props) => {
         <div>
             {/* <Button onClick={toggleDrawer(true)}>Open drawer</Button> */}
             <Drawer open={props.openDrawerCategory} onClose={toggleDrawer(false)}>
-                <div className ="flex justify-around items-center py-[16px] px-[12px]  border-b-[3px] border-[#e5e7eb]" >
+                <div className ="flex justify-around items-center py-[16px] px-[12px] w-full border-b-[3px] border-[#e5e7eb]" >
                     <h1 className = "text-[18px] font-bold">Shop By Categories</h1>
-                        <IoCloseSharp className="text-[20px] cursor-pointer" onClick={() => props.setOpenDrawerCategory(false)} />
+                        <IoCloseSharp className="text-[20px] cursor-pointer !m-0" onClick={() => props.setOpenDrawerCategory(false)} />
                 </div>
                 {DrawerList}
             </Drawer>
