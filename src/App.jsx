@@ -4,6 +4,7 @@ import './App.css'
 import Header from './components/Header'
 import Home from './Pages/Home'
 import ProductsList from "./Pages/ProductsList";
+import ProductDetail from "./Pages/ProductDetail";
 import Footer from "./components/Footer";
 
 
@@ -16,6 +17,7 @@ function App() {
             <Routes>
                 <Route path = {"/"} element = {<Home/>}/> 
                 <Route path = {"/productsList/"} element = {<ProductsList/>}/> 
+                <Route path = {"/productDetail/"} element = {<ProductDetail/>}/> 
             </Routes> 
             <Footer/>
          </BrowserRouter>
