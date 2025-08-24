@@ -41,7 +41,7 @@ body{
 
 .container{
   width: 90%;
-  margin: auto;
+  margin: center;
 }
 
 .top-strip {
@@ -50,6 +50,6 @@ body{
 }
 //Link
 .link:hover{
-  color: var(--color-primary);
+  color: var(--color-primary) !important;
 }
 

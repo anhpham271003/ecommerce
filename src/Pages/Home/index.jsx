@@ -244,9 +244,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* footer */}
-      <Footer/>
     </>
   );
 };

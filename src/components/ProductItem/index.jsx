@@ -15,7 +15,7 @@ const ProductItem = () => {
           <div className= "img h-[220px] overflow-hidden">
             <img
             src="https://gizmobo.com/wp-content/uploads/2022/08/Apple-iPhone-14-Pro-gold.jpg"
-            class="h-[220px] !object-contain object-center"
+            class="h-[220px] !object-contain object-center  group-hover:opacity-0"
             alt=""
           />
             <img
