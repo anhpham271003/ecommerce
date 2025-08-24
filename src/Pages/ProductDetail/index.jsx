@@ -48,9 +48,9 @@ const ProductDetail = () => {
       </div>
 
       {/* zoom product */}
-      <section className ="bg-white py-5">
+      <section className ="bg-white py-5 ">
         <div className="container flex gap-4">
-          <div className="productZoom w-[30%]">
+          <div className="productZoom w-[40%] overflow-hidden">
             <ProductZoom />
           </div>
         </div>
