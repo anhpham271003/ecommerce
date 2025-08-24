@@ -59,7 +59,7 @@ const ProductItem = () => {
           </Link>
         </h5>
         <h3 className="text-[15px] font-nata leading-[18px] !mt-2 mb-1 font-[500]">
-          <Link to="/" className="transition-all hover:text-[#ff5252]">
+          <Link to="/" className="transition-all hover:text-[#ff5252] line-clamp-3">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed,
             omnis?
           </Link>

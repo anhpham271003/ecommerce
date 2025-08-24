@@ -14,6 +14,9 @@ import { IoGrid, IoMenuSharp } from "react-icons/io5";
 
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+//
+import Pagination from "@mui/material/Pagination";
+import Stack from "@mui/material/Stack";
 
 function handleClick(event) {
   event.preventDefault();
@@ -21,7 +24,7 @@ function handleClick(event) {
 }
 
 const ProductSList = () => {
-  const [itemView, setItemView] = useState('grid');
+  const [itemView, setItemView] = useState("grid");
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -32,7 +35,7 @@ const ProductSList = () => {
   };
 
   return (
-    <section className="py-5">
+    <section className="pt-5">
       {/* breadcrumb */}
       <div className="container ">
         <div className="w-fit !ml-8">
@@ -73,18 +76,36 @@ const ProductSList = () => {
       <div className="bg-white !mt-5">
         <div className="container flex gap-3 ">
           {/* sidebar */}
-          <div className="sidebarWrapper w-[20%] h-full bg-white p-3 !ml-10 !mt-10">
+          <div className="sidebarWrapper w-[20%] h-full bg-white p-3 !ml-5 !mt-5">
             <SideBar />
           </div>
           {/* listProducts */}
           <div className="listProducts w-[80%]">
             <div className="flex bg-[#f1f1f1] p-2 w-full !my-3 rounded-md items-center justify-between">
               <div className="flex items-center !justify-start !m-0">
-                <Button className="!text-black !w-[40px] !h-[40px] !min-w-[40px] !rounded-full" onClick ={() => setItemView('list')}>
-                  <IoMenuSharp className="text-[rgba(0,0,0,.7)]"/>
+                <Button
+                  className="!text-black !w-[40px] !h-[40px] !min-w-[40px] !rounded-full"
+                  onClick={() => setItemView("list")}
+                >
+                  <IoMenuSharp
+                    className={`text-[18px] transition ${
+                      itemView === "list"
+                        ? "text-primary"
+                        : "text-[rgba(0,0,0,.7)]"
+                    }`}
+                  />
                 </Button>
-                <Button className="!text-black !w-[40px] !h-[40px] !min-w-[40px] !rounded-full" onClick ={() => setItemView('grid')}>
-                  <IoGrid className="text-[rgba(0,0,0,.7)]"/>
+                <Button
+                  className="!text-black !w-[40px] !h-[40px] !min-w-[40px] !rounded-full"
+                  onClick={() => setItemView("grid")}
+                >
+                  <IoGrid
+                    className={` transition ${
+                      itemView === "grid"
+                        ? "text-primary"
+                        : "text-[rgba(0,0,0,.7)]"
+                    }`}
+                  />
                 </Button>
                 <span className="text-[14px] font-[500] pl-3 !text-[rgba(0,0,0,0.7)]">
                   {" "}
@@ -150,8 +171,9 @@ const ProductSList = () => {
                 </Menu>
               </div>
             </div>
+            {/* //product list */}
             <div
-              className={`grid ${
+              className={`grid !mr-2 ${
                 itemView === "grid"
                   ? "grid-cols-2 gap-5 lg:grid-cols-4"
                   : "grid-cols-1 gap-5 lg:grid-cols-1"
@@ -184,6 +206,12 @@ const ProductSList = () => {
                   <ProductItemListView />
                 </>
               )}
+            </div>
+            {/* //pagi */}
+            <div className="flex items-center justify-center !my-4">
+              <Stack spacing={2}>
+                <Pagination count={10} showFirstButton showLastButton variant="outlined" color="primary"/>
+              </Stack>
             </div>
           </div>
         </div>
