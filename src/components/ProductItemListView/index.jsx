@@ -7,10 +7,10 @@ import { GoGitCompare } from "react-icons/go";
 import { MdOutlineZoomOutMap } from "react-icons/md";
 import Tooltip from "@mui/material/Tooltip";
 
-const ProductItem = () => {
+const ProductItemListView = () => {
   return (
-    <div className="productItem h-fit overflow-hidden rounded-lg shadow-md ">
-      <div className="imgWrapper w-full h-[220px] overflow-hidden relative group">
+    <div className="productItem h-fit overflow-hidden rounded-lg shadow-md flex items-center !m-0">
+      <div className="imgWrapper w-[25%]  overflow-hidden relative group">
         <Link to="/">
           <div className= "img h-[220px] overflow-hidden">
             <img
@@ -76,4 +76,4 @@ const ProductItem = () => {
   );
 };
 
-export default ProductItem;
+export default ProductItemListView;

@@ -7,7 +7,6 @@ import { FaShippingFast } from "react-icons/fa";
 //tab for products Popular
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import Box from "@mui/material/Box";
 import ProductSlider from "../../components/ProductSlider";
 
 // Import Swiper React components
@@ -28,7 +27,6 @@ import { IoGiftOutline, IoWalletOutline  } from "react-icons/io5";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { RiExchangeLine } from "react-icons/ri";
 import Slider2 from "../../components/Slider2";
-import Footer from "../../components/Footer";
 
 const Home = () => {
   //state for tabs

@@ -8,7 +8,6 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Navigation } from "swiper/modules";
-import { Link } from "react-router-dom";
 import ProductItem from "../ProductItem";
 
 const ProductSlider = (props) => {

@@ -18,6 +18,7 @@ const SideBar = () => {
 
   return (
     <div className="sidebar">
+      
       {/* //category filter */}
       <div className="box !mb-3">
         <div className=" flex items-center ">
@@ -302,10 +303,10 @@ const SideBar = () => {
       {/* range price filter  */}
       <div className="box !mb-3">
         <h3 className="text-[18px] font-[700] !ml-3 !mb-3 font-nata text-[rgba(0,0,0,0.7)]">
-          Availability
+          Range Price Filter
         </h3>
         <RangeSlider />
-        <div className="flex pt-2 pb-2 price">
+        <div className="flex pt-2 price">
           <span className="text-[rgba(0,0,0,0.7)] font-bold text-[13px]">
             From: $ {0}
           </span>
@@ -313,29 +314,30 @@ const SideBar = () => {
             To: $ {0}
           </span>
         </div>
+      </div>
 
-        {/* rating filter  */}
-        <div className="box !mb-3">
-          <h3 className="text-[18px] font-[700] !ml-3 !mb-3 font-nata text-[rgba(0,0,0,0.7)]">
-            Rating
-          </h3>
-          <div className=" w-full">
-            <Rating name="size-medium" defaultValue={5} size="medium" readOnly />
-          </div>
-          <div className=" w-full">
-            <Rating name="size-medium" defaultValue={4} size="medium" readOnly />
-          </div>
-          <div className=" w-full">
-            <Rating name="size-medium" defaultValue={3} size="medium" readOnly />
-          </div>
-          <div className=" w-full">
-            <Rating name="size-medium" defaultValue={2} size="medium" readOnly />
-          </div>
-          <div className=" w-full">
-            <Rating name="size-medium" defaultValue={1} size="medium" readOnly />
-          </div>
+      {/* rating filter  */}
+      <div className="box !mb-3">
+        <h3 className="text-[18px] font-[700] !ml-3 !mb-3 font-nata text-[rgba(0,0,0,0.7)]">
+          Rating Filter
+        </h3>
+        <div className=" w-full">
+          <Rating name="size-medium" defaultValue={5} size="medium" readOnly />
+        </div>
+        <div className=" w-full">
+          <Rating name="size-medium" defaultValue={4} size="medium" readOnly />
+        </div>
+        <div className=" w-full">
+          <Rating name="size-medium" defaultValue={3} size="medium" readOnly />
+        </div>
+        <div className=" w-full">
+          <Rating name="size-medium" defaultValue={2} size="medium" readOnly />
+        </div>
+        <div className=" w-full">
+          <Rating name="size-medium" defaultValue={1} size="medium" readOnly />
         </div>
       </div>
+
     </div>
   );
 };
