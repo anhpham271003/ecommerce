@@ -4,6 +4,7 @@ import { IoMdAddCircleOutline } from "react-icons/io";
 import Button from "@mui/material/Button";
 import { FiMinusCircle } from "react-icons/fi";
 
+
 const QuantityBox = () => {
   const [qty, setQty] = useState(1);
 
@@ -13,7 +14,7 @@ const QuantityBox = () => {
   };
 
   return (
-    <div className="qtyBox flex items-center">
+    <div className="qtyBox flex items-center gap-2">
       <Button
         className="!rounded-full !p-0 flex items-center justify-center !min-w-[35px] !text-black"
         onClick={decrease}

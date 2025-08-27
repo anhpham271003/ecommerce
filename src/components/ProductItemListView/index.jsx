@@ -6,6 +6,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { GoGitCompare } from "react-icons/go";
 import { MdOutlineZoomOutMap } from "react-icons/md";
 import Tooltip from "@mui/material/Tooltip";
+import { MdOutlineShoppingCart } from "react-icons/md";
 
 const ProductItemListView = () => {
   return (
@@ -72,7 +73,8 @@ const ProductItemListView = () => {
           <span className="text-primary text-[15px] font-[500] !m-0"> $500.00</span>
         </div>
 
-        <Button className="!bg-primary !text-white hover:!bg-red-500 transition !capitalize !px-10">Add to Cart</Button>
+        <Button className="!bg-primary !text-white hover:!bg-red-500 transition !capitalize !px-10">
+         <MdOutlineShoppingCart className="text-[22px] !mr-2"/>  Add to Cart</Button>
       </div>
     </div>
   );

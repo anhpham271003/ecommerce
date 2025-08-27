@@ -10,6 +10,7 @@ import Rating from "@mui/material/Rating";
 import ProductZoom from "../../components/ProductZoom";
 import Button from "@mui/material/Button";
 import QuantityBox from "../../components/QuantityBox";
+import { MdOutlineShoppingCart } from "react-icons/md";
 
 const ProductDetail = () => {
   const [typeProduct, setTypeProduct] = useState(null);
@@ -141,6 +142,8 @@ const ProductDetail = () => {
               <div className="quantityBox  !m-0">
                 <QuantityBox/>
               </div>
+              <Button className="!bg-primary !text-white hover:!bg-red-500 transition !capitalize !px-10 !mx-5">
+         <MdOutlineShoppingCart className="text-[22px] !mr-2"/>  Add to Cart</Button>
             </div>
 
 
