@@ -5,6 +5,7 @@ import Breadcrumbs from "@mui/material/Breadcrumbs";
 import HomeIcon from "@mui/icons-material/Home";
 import WhatshotIcon from "@mui/icons-material/Whatshot";
 import GrainIcon from "@mui/icons-material/Grain";
+import Rating from "@mui/material/Rating";
 
 import ProductZoom from "../../components/ProductZoom";
 
@@ -48,10 +49,47 @@ const ProductDetail = () => {
       </div>
 
       {/* zoom product */}
-      <section className ="bg-white py-5 ">
+      <section className="bg-white py-5 ">
         <div className="container flex gap-4">
           <div className="productZoom w-[40%] overflow-hidden">
             <ProductZoom />
+          </div>
+
+          <div className="productContent w-[60%] !mt-5 !ml-5">
+            <h1 className="text-[25px] font-[600] !mb-2"> IPhone 12 Promax</h1>
+            <div className="flex items-center justify-start !w-fit !m-0">
+              <span className="text-gray-500 text-[13px] ">
+                Manufacturer :{" "}
+                <span className="font-[600] text-black opacity-75">Apple</span>
+              </span>
+              <Rating
+                name="size-small"
+                defaultValue={2}
+                size="small"
+                readOnly
+                className="!ml-2"
+              />
+              <span className="!text-[13px] cursor-pointer !ml-2  opacity-65">
+                Review (5)
+              </span>
+            </div>
+            <div className="flex items-center gap-4 !my-3">
+              <span className="line-through text-gray-500 text-[17px] font-[500] !m-0">
+                $60.00
+              </span>
+              <span className="text-primary text-[17px] font-[500] !m-0">
+                $500.00
+              </span>
+            </div>
+
+            <div className="!mb-3">
+              <span className="font-bold">Available In Stock: </span>
+              <span className="font-bold text-green-600">147 Products</span>
+            </div>
+
+            <p className="line-clamp-5 text-[rgba(0,0,0,0.7)] font-liber !text-[18px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste totam vero exercitationem illo saepe aspernatur mollitia laudantium quibusdam quasi ratione vel unde excepturi corporis voluptatem ex in eligendi, labore a voluptatum autem. Dolore natus nostrum accusamus voluptatum eligendi provident, enim placeat cumque labore? Minus repellat, assumenda distinctio illum a omnis.</p>
+
+          
           </div>
         </div>
       </section>
