@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
@@ -8,8 +8,19 @@ import GrainIcon from "@mui/icons-material/Grain";
 import Rating from "@mui/material/Rating";
 
 import ProductZoom from "../../components/ProductZoom";
+import Button from "@mui/material/Button";
+import QuantityBox from "../../components/QuantityBox";
 
 const ProductDetail = () => {
+  const [typeProduct, setTypeProduct] = useState(null);
+
+  const changeTypeProduct = (index) => {
+    if (index === typeProduct) {
+      setTypeProduct(null);
+    } else {
+      setTypeProduct(index);
+    }
+  };
   return (
     <>
       {/* breadcrumb */}
@@ -87,9 +98,52 @@ const ProductDetail = () => {
               <span className="font-bold text-green-600">147 Products</span>
             </div>
 
-            <p className="line-clamp-5 text-[rgba(0,0,0,0.7)] font-liber !text-[18px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste totam vero exercitationem illo saepe aspernatur mollitia laudantium quibusdam quasi ratione vel unde excepturi corporis voluptatem ex in eligendi, labore a voluptatum autem. Dolore natus nostrum accusamus voluptatum eligendi provident, enim placeat cumque labore? Minus repellat, assumenda distinctio illum a omnis.</p>
+            <p className="line-clamp-5 text-[rgba(0,0,0,0.7)] font-liber !text-[18px]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
+              totam vero exercitationem illo saepe aspernatur mollitia
+              laudantium quibusdam quasi ratione vel unde excepturi corporis
+              voluptatem ex in eligendi, labore a voluptatum autem. Dolore natus
+              nostrum accusamus voluptatum eligendi provident, enim placeat
+              cumque labore? Minus repellat, assumenda distinctio illum a omnis.
+            </p>
 
-          
+            <div className="flex items-center gap-3 !mt-5">
+              <span className="text-[16px] font-bold !m-0">Type : </span>
+              <div className="flex items-center actions gap-1  !m-0">
+                <Button
+                  className={`!min-w-[40px] !h-[30px] !border-1 !border-gray-200 !text-[rgba(0,0,0,0.7)] ${
+                    typeProduct === 0 ? "!bg-primary !text-white" : ""
+                  }`}
+                  onClick={() => changeTypeProduct(0)}
+                >
+                  64 GB
+                </Button>
+                <Button
+                  className={`!min-w-[40px] !h-[30px] !border-1 !border-gray-200 !text-[rgba(0,0,0,0.7)] ${
+                    typeProduct === 1 ? "!bg-primary !text-white" : ""
+                  }`}
+                  onClick={() => changeTypeProduct(1)}
+                >
+                  128 GB
+                </Button>
+                <Button
+                  className={`!min-w-[40px] !h-[30px] !border-1 !border-gray-200 !text-[rgba(0,0,0,0.7)] ${
+                    typeProduct === 2 ? "!bg-primary !text-white" : ""
+                  }`}
+                  onClick={() => changeTypeProduct(2)}
+                >
+                  256 GB
+                </Button>
+              </div>
+            </div>
+
+            <div className="flex items-center !mt-4">
+              <div className="quantityBox  !m-0">
+                <QuantityBox/>
+              </div>
+            </div>
+
+
           </div>
         </div>
       </section>
