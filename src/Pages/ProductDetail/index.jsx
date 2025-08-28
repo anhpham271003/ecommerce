@@ -13,6 +13,7 @@ import QuantityBox from "../../components/QuantityBox";
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { IoGitCompareOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
+import ProductSlider from "../../components/ProductSlider";
 
 const ProductDetail = () => {
   //control state type product
@@ -312,26 +313,180 @@ const ProductDetail = () => {
             </div>
           )}
 
-          {
-            openDescription === 2 && (
-               <div className="shadow-lg w-full !py-6 !px-10 !mt-5 rounded-xl h-[70vh] overflow-auto">
-                  <h2 className="font-bold text-xl !mb-3 border-b pb-2">Customer Review Product</h2>
-                  <div className="review !w-full max-h-[300px] flex items-center justify-between">
-                    <div className="info flex items-center gap-2 w-[80%] !m-0">
-                        <div className="img overflow-hidden rounded-full !w-[80px] !h-[80px] !ml-5">
-                          <img
-                            src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dXNlcnN8ZW58MHx8MHx8&w=1000&q=80"
-                            alt=""
-                          />
-                        </div>
-                        <div className="w-[70%]">
-                          <h4 className="text-[16px]">Pham Duc Anh</h4>
-                        </div>
-                    </div>
+          {openDescription === 2 && (
+            <div className="shadow-lg !w-full !py-6 !px-10 !mt-5 rounded-xl h-[70vh] overflow-auto">
+              <h2 className="font-bold text-xl !mb-3 border-b pb-2">
+                Customer Review Product
+              </h2>
+              <div className="reviewCustomer !w-full max-h-[300px] flex items-center justify-between !mb-8 border-b-1 !pb-3 border-[rgba(0,0,0,0.2)]">
+                <div className="info flex items-center !w-[80%] !m-0">
+                  <div className="img overflow-hidden rounded-full !w-[80px] !h-[80px] !ml-5">
+                    <img
+                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dXNlcnN8ZW58MHx8MHx8&w=1000&q=80"
+                      alt=""
+                      className="!w-full"
+                    />
                   </div>
-               </div>
-            )
-          }
+                  <div className="w-[80%] !ml-3">
+                    <h4 className="text-[16px] font-bold !ml-0">
+                      Pham Duc Anh
+                    </h4>
+                    <h5 className="text-[13px] !ml-0 italic">28/08/2025</h5>
+                    <p className="!my-0 text-[rgba(0,0,0,0.7)]">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Inventore quibusdam veritatis, dicta adipisci corporis
+                      nihil veniam dolor dolore aut similique enim voluptatibus
+                      ullam placeat debitis minus perferendis nemo atque tempora
+                      maiores iure. Eos delectus, ratione impedit exercitationem
+                      expedita, cumque ut beatae est porro officia cupiditate,
+                      facilis quidem doloribus labore facere.
+                    </p>
+                  </div>
+                </div>
+                <Rating
+                  name="size-small !m-auto"
+                  defaultValue={2}
+                  size="small"
+                  readOnly
+                />
+              </div>
+              <div className="reviewCustomer !w-full max-h-[300px] flex items-center justify-between !mb-8 border-b-1 !pb-3 border-[rgba(0,0,0,0.2)]">
+                <div className="info flex items-center !w-[80%] !m-0">
+                  <div className="img overflow-hidden rounded-full !w-[80px] !h-[80px] !ml-5">
+                    <img
+                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dXNlcnN8ZW58MHx8MHx8&w=1000&q=80"
+                      alt=""
+                      className="!w-full"
+                    />
+                  </div>
+                  <div className="w-[80%] !ml-3">
+                    <h4 className="text-[16px] font-bold !ml-0">
+                      Pham Duc Anh
+                    </h4>
+                    <h5 className="text-[13px] !ml-0 italic">28/08/2025</h5>
+                    <p className="!my-0 text-[rgba(0,0,0,0.7)]">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Inventore quibusdam veritatis, dicta adipisci corporis
+                      nihil veniam dolor dolore aut similique enim voluptatibus
+                      ullam placeat debitis minus perferendis nemo atque tempora
+                      maiores iure. Eos delectus, ratione impedit exercitationem
+                      expedita, cumque ut beatae est porro officia cupiditate,
+                      facilis quidem doloribus labore facere.
+                    </p>
+                  </div>
+                </div>
+                <Rating
+                  name="size-small !m-auto"
+                  defaultValue={2}
+                  size="small"
+                  readOnly
+                />
+              </div>
+              <div className="reviewCustomer !w-full max-h-[300px] flex items-center justify-between !mb-8 border-b-1 !pb-3 border-[rgba(0,0,0,0.2)]">
+                <div className="info flex items-center !w-[80%] !m-0">
+                  <div className="img overflow-hidden rounded-full !w-[80px] !h-[80px] !ml-5">
+                    <img
+                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dXNlcnN8ZW58MHx8MHx8&w=1000&q=80"
+                      alt=""
+                      className="!w-full"
+                    />
+                  </div>
+                  <div className="w-[80%] !ml-3">
+                    <h4 className="text-[16px] font-bold !ml-0">
+                      Pham Duc Anh
+                    </h4>
+                    <h5 className="text-[13px] !ml-0 italic">28/08/2025</h5>
+                    <p className="!my-0 text-[rgba(0,0,0,0.7)]">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Inventore quibusdam veritatis, dicta adipisci corporis
+                      nihil veniam dolor dolore aut similique enim voluptatibus
+                      ullam placeat debitis minus perferendis nemo atque tempora
+                      maiores iure. Eos delectus, ratione impedit exercitationem
+                      expedita, cumque ut beatae est porro officia cupiditate,
+                      facilis quidem doloribus labore facere.
+                    </p>
+                  </div>
+                </div>
+                <Rating
+                  name="size-small !m-auto"
+                  defaultValue={2}
+                  size="small"
+                  readOnly
+                />
+              </div>
+              <div className="reviewCustomer !w-full max-h-[300px] flex items-center justify-between !mb-8 border-b-1 !pb-3 border-[rgba(0,0,0,0.2)]">
+                <div className="info flex items-center !w-[80%] !m-0">
+                  <div className="img overflow-hidden rounded-full !w-[80px] !h-[80px] !ml-5">
+                    <img
+                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dXNlcnN8ZW58MHx8MHx8&w=1000&q=80"
+                      alt=""
+                      className="!w-full"
+                    />
+                  </div>
+                  <div className="w-[80%] !ml-3">
+                    <h4 className="text-[16px] font-bold !ml-0">
+                      Pham Duc Anh
+                    </h4>
+                    <h5 className="text-[13px] !ml-0 italic">28/08/2025</h5>
+                    <p className="!my-0 text-[rgba(0,0,0,0.7)]">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Inventore quibusdam veritatis, dicta adipisci corporis
+                      nihil veniam dolor dolore aut similique enim voluptatibus
+                      ullam placeat debitis minus perferendis nemo atque tempora
+                      maiores iure. Eos delectus, ratione impedit exercitationem
+                      expedita, cumque ut beatae est porro officia cupiditate,
+                      facilis quidem doloribus labore facere.
+                    </p>
+                  </div>
+                </div>
+                <Rating
+                  name="size-small !m-auto"
+                  defaultValue={2}
+                  size="small"
+                  readOnly
+                />
+              </div>
+              <div className="reviewCustomer !w-full max-h-[300px] flex items-center justify-between !mb-8 border-b-1 !pb-3 border-[rgba(0,0,0,0.2)]">
+                <div className="info flex items-center !w-[80%] !m-0">
+                  <div className="img overflow-hidden rounded-full !w-[80px] !h-[80px] !ml-5">
+                    <img
+                      src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dXNlcnN8ZW58MHx8MHx8&w=1000&q=80"
+                      alt=""
+                      className="!w-full"
+                    />
+                  </div>
+                  <div className="w-[80%] !ml-3">
+                    <h4 className="text-[16px] font-bold !ml-0">
+                      Pham Duc Anh
+                    </h4>
+                    <h5 className="text-[13px] !ml-0 italic">28/08/2025</h5>
+                    <p className="!my-0 text-[rgba(0,0,0,0.7)]">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                      Inventore quibusdam veritatis, dicta adipisci corporis
+                      nihil veniam dolor dolore aut similique enim voluptatibus
+                      ullam placeat debitis minus perferendis nemo atque tempora
+                      maiores iure. Eos delectus, ratione impedit exercitationem
+                      expedita, cumque ut beatae est porro officia cupiditate,
+                      facilis quidem doloribus labore facere.
+                    </p>
+                  </div>
+                </div>
+                <Rating
+                  name="size-small !m-auto"
+                  defaultValue={2}
+                  size="small"
+                  readOnly
+                />
+              </div>
+
+            </div>
+          )}
+        </div>
+
+          {/* related product */}
+        <div className="container !mt-10">
+          <h2 className="text-[20px] font-[600]"> Related Product</h2>
+          <ProductSlider itemsProduct={6} />
         </div>
       </section>
     </>
