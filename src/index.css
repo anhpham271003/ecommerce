@@ -16,7 +16,6 @@
 
 *{
   margin: auto; 
-  adding: 0px;
   box-sizing: border-box;
 }
 
@@ -41,7 +40,6 @@ body{
 
 .container{
   width: 90%;
-  margin: center;
 }
 
 .top-strip {
@@ -53,3 +51,7 @@ body{
   color: var(--color-primary) !important;
 }
 
+.productModalContent, 
+.productModalContent * {
+  margin: 0 !important;
+}

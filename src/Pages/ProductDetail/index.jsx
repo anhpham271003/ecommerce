@@ -5,31 +5,15 @@ import Breadcrumbs from "@mui/material/Breadcrumbs";
 import HomeIcon from "@mui/icons-material/Home";
 import WhatshotIcon from "@mui/icons-material/Whatshot";
 import GrainIcon from "@mui/icons-material/Grain";
-import Rating from "@mui/material/Rating";
 
 import ProductZoom from "../../components/ProductZoom";
-import Button from "@mui/material/Button";
-import QuantityBox from "../../components/QuantityBox";
-import { MdOutlineShoppingCart } from "react-icons/md";
-import { IoGitCompareOutline } from "react-icons/io5";
-import { FaRegHeart } from "react-icons/fa";
 import ProductSlider from "../../components/ProductSlider";
+import ProductDetailComponent from "../../components/ProductDetailComponent";
+
 
 const ProductDetail = () => {
-  //control state type product
-  const [typeProduct, setTypeProduct] = useState(null);
   //control open product detail and review
   const [openDescription, setOpenDescription] = useState(0);
-
-  //control function type product
-  const changeTypeProduct = (index) => {
-    if (index === typeProduct) {
-      setTypeProduct(null);
-    } else {
-      setTypeProduct(index);
-    }
-  };
-
   //control function open description
   const setOpenActive = (index) => {
     setOpenDescription(index);
@@ -80,101 +64,9 @@ const ProductDetail = () => {
             <ProductZoom />
           </div>
           {/* //CONTENT PRODUCT */}
-          <div className="productContent w-[60%] !mt-5 !ml-5">
-            <h1 className="text-[25px] font-[600] !mb-2"> IPhone 12 Promax</h1>
-            <div className="flex items-center justify-start !w-fit !m-0">
-              <span className="text-gray-500 text-[13px] ">
-                Manufacturer :{" "}
-                <span className="font-[600] text-black opacity-75">Apple</span>
-              </span>
-              <Rating
-                name="size-small"
-                defaultValue={2}
-                size="small"
-                readOnly
-                className="!ml-2"
-              />
-              <span className="!text-[13px] cursor-pointer !ml-2  opacity-65">
-                Review (5)
-              </span>
-            </div>
-            <div className="flex items-center gap-4 !my-3">
-              <span className="line-through text-gray-500 text-[17px] font-[500] !m-0">
-                $60.00
-              </span>
-              <span className="text-primary text-[17px] font-[500] !m-0">
-                $500.00
-              </span>
-            </div>
-
-            <div className="!mb-3">
-              <span className="font-bold">Available In Stock: </span>
-              <span className="font-bold text-green-600">147 Products</span>
-            </div>
-
-            <p className="line-clamp-5 text-[rgba(0,0,0,0.7)] font-liber !text-[18px]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
-              totam vero exercitationem illo saepe aspernatur mollitia
-              laudantium quibusdam quasi ratione vel unde excepturi corporis
-              voluptatem ex in eligendi, labore a voluptatum autem. Dolore natus
-              nostrum accusamus voluptatum eligendi provident, enim placeat
-              cumque labore? Minus repellat, assumenda distinctio illum a omnis.
-            </p>
-
-            <div className="flex items-center gap-3 !mt-5">
-              <span className="text-[16px] font-bold !m-0">Type : </span>
-              <div className="flex items-center actions gap-1  !m-0">
-                <Button
-                  className={`!min-w-[40px] !h-[30px] !border-1 !border-gray-200 !text-[rgba(0,0,0,0.7)] ${
-                    typeProduct === 0 ? "!bg-primary !text-white" : ""
-                  }`}
-                  onClick={() => changeTypeProduct(0)}
-                >
-                  64 GB
-                </Button>
-                <Button
-                  className={`!min-w-[40px] !h-[30px] !border-1 !border-gray-200 !text-[rgba(0,0,0,0.7)] ${
-                    typeProduct === 1 ? "!bg-primary !text-white" : ""
-                  }`}
-                  onClick={() => changeTypeProduct(1)}
-                >
-                  128 GB
-                </Button>
-                <Button
-                  className={`!min-w-[40px] !h-[30px] !border-1 !border-gray-200 !text-[rgba(0,0,0,0.7)] ${
-                    typeProduct === 2 ? "!bg-primary !text-white" : ""
-                  }`}
-                  onClick={() => changeTypeProduct(2)}
-                >
-                  256 GB
-                </Button>
-              </div>
-            </div>
-            <p className="text-[14px] opacity-70 !mt-4 !mb-2">
-              Shipping (Est. Delivery Time 2-3 Days)
-            </p>
-
-            <div className="flex items-center ">
-              <div className="quantityBox  !m-0">
-                <QuantityBox />
-              </div>
-              <Button className="!bg-primary !text-white !rounded-full hover:!bg-red-500 transition !capitalize !px-10 !mx-5">
-                <MdOutlineShoppingCart className="text-[22px] !mr-2" /> Add to
-                Cart
-              </Button>
-            </div>
-
-            <div className="flex items-center gap-5 !mt-3">
-              <span className="flex items-center gap-2 text-[15px] hover:!text-primary cursor-pointer font-liber !m-0">
-                <FaRegHeart className="text-[18px]" /> Add to Wishlist
-              </span>
-              <span className="flex items-center gap-2 text-[15px] hover:!text-primary cursor-pointer font-liber !m-0">
-                <IoGitCompareOutline className="text-[18px]" /> Add to Compare
-              </span>
-            </div>
-          </div>
+          <ProductDetailComponent/>
         </div>
-
+        {/* // description */}
         <div className="container pt-10 ">
           <div className="flex items-center gap-8 ">
             <span
