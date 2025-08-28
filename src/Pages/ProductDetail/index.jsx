@@ -10,7 +10,6 @@ import ProductZoom from "../../components/ProductZoom";
 import ProductSlider from "../../components/ProductSlider";
 import ProductDetailComponent from "../../components/ProductDetailComponent";
 
-
 const ProductDetail = () => {
   //control open product detail and review
   const [openDescription, setOpenDescription] = useState(0);
@@ -64,7 +63,10 @@ const ProductDetail = () => {
             <ProductZoom />
           </div>
           {/* //CONTENT PRODUCT */}
-          <ProductDetailComponent/>
+          <div className="productContent !w-[60%] !mt-5 !ml-5">
+            <ProductDetailComponent />
+          </div>
+          .
         </div>
         {/* // description */}
         <div className="container pt-10 ">
@@ -370,12 +372,11 @@ const ProductDetail = () => {
                   readOnly
                 />
               </div>
-
             </div>
           )}
         </div>
 
-          {/* related product */}
+        {/* related product */}
         <div className="container !mt-10">
           <h2 className="text-[20px] font-[600]"> Related Product</h2>
           <ProductSlider itemsProduct={6} />

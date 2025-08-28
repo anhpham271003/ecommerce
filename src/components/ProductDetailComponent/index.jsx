@@ -23,7 +23,6 @@ const productDetailComponent = () => {
   return (
     <>
       {/* //CONTENT PRODUCT */}
-      <div className="productContent !w-[60%] !mt-5 !ml-5">
         <h1 className="text-[25px] font-[600] !mb-2"> IPhone 12 Promax</h1>
         <div className="flex items-center justify-start !w-fit !m-0">
           <span className="text-gray-500 text-[13px] ">
@@ -114,7 +113,6 @@ const productDetailComponent = () => {
             <IoGitCompareOutline className="text-[18px]" /> Add to Compare
           </span>
         </div>
-      </div>
     </>
   );
 };

@@ -17,7 +17,7 @@ import { FaWindowClose } from "react-icons/fa";
 const myContext = createContext();
 
 function App() {
-  const [openProductModal, setOpenProductModal] = useState(true);
+  const [openProductModal, setOpenProductModal] = useState(false);
 
   const handleClickOpen = () => {
     setOpenProductModal(true);
@@ -27,12 +27,12 @@ function App() {
     setOpenProductModal(false);
   };
 
-  const values = {};
+  const values = {setOpenProductModal};
 
   return (
     <>
       <BrowserRouter>
-        <myContext.Provider values={values}>
+        <myContext.Provider value={values}>
           <Header />
           <Routes>
             <Route path={"/"} element={<Home />} />
@@ -51,9 +51,10 @@ function App() {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
         className="productModal"
+        
       >
-        <DialogContent>
-          <div className=" relative flex items-center !w-full productModalContent">
+        <DialogContent className="!m-0">
+          <div className=" relative !flex !items-center !justify-center !w-full productModalContent ">
             <Button
               className="!absolute top-1 right-1 !w-[40px] !h-[40px] !min-w-[40px] !rounded-full !text-gray-700 hover:!text-red-500 text-2xl transition duration-300"
               onClick={handleClose}
@@ -63,7 +64,7 @@ function App() {
             <div className="!w-[40%] !m-0">
               <ProductZoom />
             </div>
-            <div className="!w-[60%] !m-0">
+            <div className=" !w-[60%] !m-0 !ml-5" >
               <ProductDetailComponent />
             </div>
           </div>
@@ -74,3 +75,4 @@ function App() {
 }
 
 export default App;
+export {myContext};

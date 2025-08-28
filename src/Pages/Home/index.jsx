@@ -36,7 +36,7 @@ const Home = () => {
   };
 
   return (
-    <>
+    <div className="home !m-auto">
       <Slider />
       <Slider2 />
 
@@ -242,7 +242,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

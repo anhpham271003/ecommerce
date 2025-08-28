@@ -50,8 +50,3 @@ body{
 .link:hover{
   color: var(--color-primary) !important;
 }
-
-.productModalContent, 
-.productModalContent * {
-  margin: 0 !important;
-}

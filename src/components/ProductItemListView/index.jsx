@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Rating from "@mui/material/Rating";
 import Button from "@mui/material/Button";
@@ -7,8 +7,12 @@ import { GoGitCompare } from "react-icons/go";
 import { MdOutlineZoomOutMap } from "react-icons/md";
 import Tooltip from "@mui/material/Tooltip";
 import { MdOutlineShoppingCart } from "react-icons/md";
+import { myContext } from "../../App";
 
 const ProductItemListView = () => {
+
+  const context = useContext(myContext);
+  
   return (
     <div className="productItem h-fit overflow-hidden rounded-lg shadow-md flex items-center !m-0 bg-[#f1f1f1]">
       <div className="imgWrapper w-[25%]  overflow-hidden relative group">
@@ -46,7 +50,7 @@ const ProductItemListView = () => {
           </Tooltip>
 
           <Tooltip title="Zoom" placement="right" arrow>
-            <Button className=" !w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-sky-300 text-white hover:!bg-primary hover:text-white group">
+            <Button className=" !w-[35px] !h-[35px] !min-w-[35px] !rounded-full !bg-sky-300 text-white hover:!bg-primary hover:text-white group" onClick={() => context.setOpenProductModal(true)}>
               <MdOutlineZoomOutMap className="text-[18px] !text-white group-hover:text-white hover:!text-white pointer-events-none" />
             </Button>
           </Tooltip>

@@ -143,7 +143,7 @@ const ProductZoom = () => {
             <img
               src="https://cdn.nguyenkimmall.com/images/detailed/824/dien-thoai-iphone-14-pro-max-512gb-tim-4.jpg"
               alt="Main product"
-              className="max-h-full max-w-full object-contain cursor-pointer"
+              className="max-h-full max-w-full !object-contain cursor-pointer"
               onClick={() =>
                 openModal(
                   "https://cdn.nguyenkimmall.com/images/detailed/824/dien-thoai-iphone-14-pro-max-512gb-tim-4.jpg"
